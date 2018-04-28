@@ -302,7 +302,7 @@
                     // Modal appears with match/no match, 
                     // then the survey is reset and the friends.js file receives the "user profile"
                     modal.show();
-                    $('.form')[0].reset();
+                    // $('.form')[0].reset();
                     $.post(apiFriendsRoute, newPerson);
                 });
             } else {
@@ -314,7 +314,7 @@
         });
 
         function makeMatch(data) {
-            var difference = 40;
+            var difference = 50;
             var minName;
             var minImage;
             data.forEach(function (person) {
