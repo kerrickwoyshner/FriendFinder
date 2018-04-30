@@ -257,7 +257,7 @@
             event.preventDefault();
             // set global variable values for multiple uses in this and other functions
             nameVal = $('#name').val();
-            imageVal = $('#image').val();
+            imageVal = $('#photo').val();
             q1Val = parseInt($('#q1').val());
             q2Val = parseInt($('#q2').val());
             q3Val = parseInt($('#q3').val());
@@ -301,7 +301,7 @@
                 }).then(function () {
                     // Modal appears with match/no match, 
                     // then the survey is reset and the friends.js file receives the "user profile"
-                    modal.show();
+                    modal.modal("show");
                     // $('.form')[0].reset();
                     $.post(apiFriendsRoute, newPerson);
                 });
@@ -309,7 +309,7 @@
                 // Modal returns an error message if incomplete information is entered
                 modalTitle.text('Error');
                 modalBody.text('Please make sure all questions have been filled in.');
-                modal.show();
+                modal.modal("show");
             }
         });
 
