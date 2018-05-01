@@ -314,13 +314,13 @@
         });
 
         function makeMatch(data) {
-            var difference = 50;
+            var tempBestMatch = 50;
             var minName;
             var minImage;
             data.forEach(function (person) {
                 var localDiff = Math.abs(newPerson.total - person.total);
-                if (localDiff < difference) {
-                    difference = localDiff;
+                if (localDiff < tempBestMatch) {
+                    tempBestMatch = localDiff;
                     minName = person.name;
                     minImage = person.image;
                 }
